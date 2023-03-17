@@ -1,0 +1,19 @@
+{% extends 'layout.html' %}
+
+{% block title %} - Update Data{% endblock title %}
+
+{% block title_text %}Daten aktualisieren{% endblock title_text %}
+
+{% block main %}
+<form action="/update_data" method="POST">
+    <div class="inputs">
+        <h4><b>Änderungen vornehmen:</b></h4>
+        <p><b>Id: </b> <small>[Ist unter <a href="/data">data</a> zu finden.]</small> <input type="text" name="user_id" class="form-control" placeholder="Id"></p>
+        <p><b>Bewertung: </b><input type="number" name="rating" class="form-control" placeholder="Bewertung" min="1" max="5"></p>
+        <p><b>Anmerkung: </b><p><textarea class="form-control" rows="5" name="comment" class="form-control" placeholder="Beschreibung und Anmerkungen"></textarea></p></p>
+        <button class="btn btn-primary" name="btn-submit" type="submit"> Send </button>
+        <p></p>
+        <p><small class="boxed_button_link"><a href="/delete_data"> Löschen </a></small></p>
+    </div>
+</form>
+{% endblock main %}

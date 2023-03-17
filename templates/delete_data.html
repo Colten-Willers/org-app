@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+{% block title %} - Delete Data{% endblock title %}
+
+{% block title_text %}Daten Löschen{% endblock title_text %}
+
+{% block main %}
+<form action="/delete_data" method="POST">
+    <div class="inputs">
+        <h4><b>Daten zur Löschung:</b></h4>
+        <p><b>Id: </b>  <small>[Ist unter <a href="/data">data</a> zu finden.]</small> <input type="text" name="user_id" class="form-control" placeholder="Id"></p>
+        <button class="btn btn-primary" name="btn-submit" type="submit"> Löschen </button>
+        <p></p>
+    </div>
+</form>
+{% endblock main %}
